@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.dora"
+    },
+    "jhipsterVersion": "4.10.2",
+    "baseName": "poseidon",
+    "packageName": "com.dora",
+    "packageFolder": "com/dora",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": true,
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "2d7ba242d75b281bb9219c7a5d4bbaae1dac649e",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "yarn",
+    "applicationType": "monolith",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
