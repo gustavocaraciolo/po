@@ -1,0 +1,35 @@
+
+<div *ngIf="userExtra">
+    <h2><span>User Extra</span> {{userExtra.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Telephone</span></dt>
+        <dd>
+            <span>{{userExtra.telephone}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{userExtra.userId}}
+        </dd>
+        <dt><span>Tag</span></dt>
+        <dd>
+            <div *ngIf="userExtra.tagId">
+                <a [routerLink]="['/tag', userExtra.tagId]">{{userExtra.tagId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'user-extra/'+ userExtra.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

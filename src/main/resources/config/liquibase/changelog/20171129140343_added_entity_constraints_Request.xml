@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Request.
+    -->
+    <changeSet id="20171129140343-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="user_extra_id"
+                                 baseTableName="request"
+                                 constraintName="fk_request_user_extra_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_extra"/>
+
+        <addForeignKeyConstraint baseColumnNames="request_items_id"
+                                 baseTableName="request"
+                                 constraintName="fk_request_request_items_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="request_items"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,37 @@
+
+<div *ngIf="request">
+    <h2><span>Request</span> {{request.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Date Request</span></dt>
+        <dd>
+            <span>{{request.dateRequest | date:'medium'}}</span>
+        </dd>
+        <dt><span>User Extra</span></dt>
+        <dd>
+            <div *ngIf="request.userExtraId">
+                <a [routerLink]="['/user-extra', request.userExtraId]">{{request.userExtraId}}</a>
+            </div>
+        </dd>
+        <dt><span>Request Items</span></dt>
+        <dd>
+            <div *ngIf="request.requestItemsId">
+                <a [routerLink]="['/request-items', request.requestItemsId]">{{request.requestItemsId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'request/'+ request.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>

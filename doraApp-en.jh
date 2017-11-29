@@ -1,0 +1,46 @@
+entity Product{
+    name String required,
+    amount Integer,
+    unitPrice BigDecimal,
+    quantityInStock Integer,
+    requestQuantity Integer
+}
+
+entity Category{
+    name String required
+}
+
+entity Request{
+    dateRequest ZonedDateTime
+}
+
+entity RequestItems{
+    discount BigDecimal
+}
+
+entity UserExtra{
+    telephone String
+}
+
+entity Tag {
+    name String required
+}
+
+relationship OneToMany {
+    Tag{userExtra} to UserExtra{tag},
+    RequestItems{pedido} to Request{requestItems}
+}
+
+relationship OneToOne {
+    Product{category} to Category{product},
+    UserExtra{user required} to User{userExtra}
+}
+
+relationship ManyToOne {
+    Request{UserExtra required} to UserExtra{request},
+    RequestItems{product required} to Product{requestItems}
+}
+
+paginate all with pagination
+dto * with mapstruct
+service all with serviceImpl
