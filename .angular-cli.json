@@ -8,6 +8,7 @@
         "outDir": "target/www/app",
         "assets": [
             "content",
+            "assets",
             "favicon.ico"
         ],
         "index": "index.html",
@@ -21,7 +22,14 @@
             "content/css/vendor.css",
             "content/css/global.css"
         ],
-        "scripts": []
+        "scripts": [
+            "../node_modules/jquery/dist/jquery.js",
+            "../node_modules/nanoscroller/bin/javascripts/jquery.nanoscroller.js",
+            "../node_modules/moment/moment.js",
+            "../node_modules/chart.js/dist/Chart.js",
+            "../node_modules/fullcalendar/dist/fullcalendar.js",
+            "../node_modules/quill/dist/quill.js"
+        ]
     }],
     "lint": [{
             "project": "../../../tsconfig.json"

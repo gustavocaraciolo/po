@@ -1,4 +1,10 @@
 /* after changing this file run 'yarn run webpack:build' */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../../assets/theme/theme-turquoise.css';
+@import '../../assets/layout/css/layout-turquoise.css';
 @import '~font-awesome/css/font-awesome.css';
+@import '~primeng/resources/primeng.css';
+@import '~fullcalendar/dist/fullcalendar.css';
+@import '~quill/dist/quill.snow.css';
+@import '~nanoscroller/bin/css/nanoscroller.css';
 
